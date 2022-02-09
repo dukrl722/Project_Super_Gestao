@@ -55,14 +55,15 @@
                                 {{ $fornecedor->email }}
                             </th>
                             <th>
-                                Excluir
+                                <a href="{{ route('app.fornecedor.excluir', $fornecedor->id) }}">Excluir</a>
                             </th>
                             <th>
-                                Editar
+                                <a href="{{ route('app.fornecedor.editar', $fornecedor->id) }}">Editar</a>
                             </th>
                         @endforeach
                     </tbody>
                 </table>
+                {{ $fornecedores->appends($request)->links() }}
             </div>
         </div>
     </div>
